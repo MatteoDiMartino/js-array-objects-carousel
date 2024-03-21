@@ -28,6 +28,12 @@ console.log(containerPrincipalimg)
 let thumbnail = document.querySelector('#senBox')
 console.log(thumbnail)
 
+let arrowUp = document.querySelector('#arrowUp');
+console.log(arrowUp)
+
+let arrowDown = document.querySelector('#arrowDown');
+console.log(arrowDown)
+
 for (let i = 0; i < images.length; i++) {
     let makeThumb = document.createElement('div')
     console.log(makeThumb);
@@ -37,8 +43,26 @@ for (let i = 0; i < images.length; i++) {
     imgElement.src = images[i].image;
     makeThumb.appendChild(imgElement);
     thumbnail.appendChild(makeThumb);
-}
 
+    arrowUp.addEventListener('click', function() {
+        for (let i = 0; i < images.length; i++) {
+            containerPrincipalimg.innerHTML = '';
+            let imgFull = document.createElement('img');
+            imgFull.src = images[i].image;
+            containerPrincipalimg.appendChild(imgFull);
+
+        }
+
+    })
+
+    arrowDown.addEventListener('click', function() {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            showImage(currentIndex);
+            updateThumbnails();
+        }
+    });
+}
 
 // definisco l'elemento attivo in falso
 // da li seleziono il box con l'immagine attiva e per ogni valore 
