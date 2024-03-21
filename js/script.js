@@ -32,7 +32,7 @@ for (let i = 0; i < images.length; i++) {
     let makeThumb = document.createElement('div')
     console.log(makeThumb);
     makeThumb.classList.add('col-20');
-
+    makeThumb.classList.add('thumb-no')
     let imgElement = document.createElement('img');
     imgElement.src = images[i].image;
     makeThumb.appendChild(imgElement);
