@@ -21,3 +21,18 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+
+
+let containerPrincipalimg = document.querySelector('#mainBox');
+console.log(containerPrincipalimg)
+
+for (let i = 0; i < images.length; i++) {
+    let valueofarray = images[i];
+    console.log(valueofarray)
+}
+
+
+// definisco l'elemento attivo in falso
+// da li seleziono il box con l'immagine attiva e per ogni valore 
+// image in un oggetto dell'array images lo vado ad inserire all'interno
