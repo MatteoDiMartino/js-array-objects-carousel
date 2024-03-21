@@ -22,14 +22,16 @@ const images = [
     }
 ];
 
-
-
 let containerPrincipalimg = document.querySelector('#mainBox');
 console.log(containerPrincipalimg)
+
+let thumbnail = document.querySelector('#senBox')
+console.log(thumbnail)
 
 for (let i = 0; i < images.length; i++) {
     let valueofarray = images[i];
     console.log(valueofarray)
+    containerPrincipalimg.innerHTML = images[0].image;
 }
 
 
