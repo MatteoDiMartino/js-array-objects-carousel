@@ -2,6 +2,10 @@
     height: 450px;
 }
 
+.ms-secondary-box {
+    background-color: black;
+}
+
 .ms-main-container {
     height: 100vh;
 }
@@ -21,6 +25,16 @@ img {
     height: 100%;
 }
 
+.thumb-no {
+    opacity: 0.6;
+}
+
+.thumb-active {
+    opacity: 1;
+}
+
+
+
 .boxbtn {
     position: relative;
 }
@@ -29,12 +43,13 @@ img {
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, 10%);
+    z-index: 4;
 }
 
 .btnDown {
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -110%);
 }

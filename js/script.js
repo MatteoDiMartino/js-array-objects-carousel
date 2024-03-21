@@ -29,9 +29,14 @@ let thumbnail = document.querySelector('#senBox')
 console.log(thumbnail)
 
 for (let i = 0; i < images.length; i++) {
-    let valueofarray = images[i];
-    console.log(valueofarray)
-    containerPrincipalimg.innerHTML = images[0].image;
+    let makeThumb = document.createElement('div')
+    console.log(makeThumb);
+    makeThumb.classList.add('col-20');
+
+    let imgElement = document.createElement('img');
+    imgElement.src = images[i].image;
+    makeThumb.appendChild(imgElement);
+    thumbnail.appendChild(makeThumb);
 }
 
 
